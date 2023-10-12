@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+
+/* CSS resetlme bölümü */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Sitenin global değişkenleri */
+:root {
+  --arkaplan: #424242;
+  --temarengi: #e4e4e4;
+  --iconrengi: #291;
+  --textColor: #289112;
+  --dairerengi: #349fb2ec;
+}
+
+header {
+  height: 100vh;
+  width: 400px;
+  padding: 15px 30px;
+  background-color: var(--arkaplan);
+  overflow-y: auto;
+  position: fixed;
+  transition: 0.4;
+  z-index: 99;
+}
+
+header .headeryerim {
+  text-align: center;
+  margin: 10px 0;
+}
+
+header .headeryerim img {
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid var(--dairerengi);
+}
+
+header .headeryerim h1 {
+  color: white;
+  font-weight: 600;
+}
+
+header .headeryerim h2 {
+  color: rgb(15, 132, 164);
+  font-weight: 600;
+}
+
+header .iconlar {
+  font-size: 20px;
+  transition: 0.4;
+  color: rgb(244, 140, 140);
+}
+
+header .iconlar a {
+  margin: 5px;
+  border-radius: 50%;
+  width: 200px;
+  height: 100px;
+  transition: 0.4;
+  color: rgb(199, 188, 73);
+}
+
+header nav {
+  color: rgb(5, 230, 255);
+  padding: 100px;
+}
+
+header nav a {
+  color: rgb(197, 197, 197);
+}
+
+header nav ul li a {
+  font-weight: 200;
+  font-size: 20px;
+  letter-spacing: 0.5;
+  display: inline-block;
+  padding: 7px 1px;
+  margin: 20px 0;
+}
+
+.footer {
+  text-indent: 10px;
+  width: 300px;
+  position: fixed;
+  bottom: 0;
+  left: 10px; /* alt köşeye sabitleme */
+  transition: 0.4s; /* Transition süresi saniye olarak belirtilmeli EFFECT*/
+  font-size: 15px;
+  z-index: 100;
+}
+
+footer p {
+  position: relative;
+  left: 150px;
+  color: aquamarine;
+}
+
+footer p a {
+  position: relative;
+  color: rgb(14, 227, 255);
+}
+
+footer img {
+  position: relative;
+  left: 40px; /* Sola kaydırma */
+}
+
+main {
+  margin-left: 400px;
+  background-color: lightgray;
+}
+
+#ana {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./arkaplan.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+  position: relative;
+}
+
+/*  HTML öğesinin içeriğinin öncesine içerik eklemenizi sağlar */
+#ana ::before {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(239, 194, 194, 0);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+#ana .anayer {
+  z-index: 1;
+}
+
+#ana .anayer h1 {
+  font-size: 60px;
+  color: white;
+  line-height: 70px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+#ana .anayer h1 span {
+  border-bottom: 4px solid var(--dairerengi);
+}
